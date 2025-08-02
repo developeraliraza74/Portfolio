@@ -1,0 +1,340 @@
+/* CSS Variables for easy theme management */
+:root {
+  --bg-color: #0a0a0a;
+  --primary-color: #00e5ff;
+  --card-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --text-muted: #888;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Basic Reset and Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Custom Cursor */
+#cursor {
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+#cursor.grow {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  mix-blend-mode: difference;
+}
+
+/* Header / Hero Section */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  margin-bottom: 0.5rem;
+}
+
+#animated-name::after {
+  content: "_";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+header p.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.download-resume {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 12px 28px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.download-resume:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+}
+
+nav a {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* General Section Styling */
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#profile-paragraph {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Projects Section - Card Layout */
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card .project-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-buttons a {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+/* Skills Section */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--card-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  font-weight: 500;
+  mix-blend-mode: difference;
+}
+.skill i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* Contact Form */
+#contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#actualForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#actualForm .form-input,
+#actualForm .form-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+#actualForm .submit-button {
+  padding: 1rem;
+  border: none;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#actualForm .submit-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+}
+#status {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: var(--card-color);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+footer .social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+footer .social a {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+footer .social a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

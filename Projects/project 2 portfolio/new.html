@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #navbar {
+        display: flex;
+        align-items: flex-end;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+
+      #navbar h3 {
+        padding: 8px 15px;
+        margin-right: 10px;
+        font-size: 18px;
+        background-color: black;
+        color: white;
+        font-weight: 600;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      #nav-part-2 h4 {
+        font-size: 30px;
+        /* text align center to center */
+      }
+
+      main {
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      #hero {
+        padding: 10px 50px;
+        margin-top: 100px;
+      }
+
+      #hero h1 {
+        font-size: 110px;
+        line-height: 80px;
+      }
+
+      #scroll {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0;
+      }
+
+      #scroll h3 {
+        font-size: 24px;
+      }
+
+      #hero-image {
+        height: 120vh;
+        width: 100%;
+        background-image: url("assets/images/Me.jpg");
+        background-position: top;
+        object-fit: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-top-right-radius: 20px;
+      }
+
+      #about-section {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: 15px 40px; */
+        padding: 50px 40px;
+        border-bottom: 2px solid;
+      }
+
+      #about-section h3 {
+        font-size: 68px;
+        line-height: 63px;
+        letter-spacing: -2px;
+        font-weight: 700;
+        width: 60%;
+      }
+
+      #about-section #nav-part-2 {
+        height: 270px;
+        width: 36%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        border-left: 4px solid;
+        margin: 20px 30px;
+        text-align: center;
+      }
+
+      #my-works {
+        display: flex;
+        justify-content: center;
+        padding: 50px 40px;
+        /* height: doesnot matter; */
+      }
+
+      #my-works #work-part-1 {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #my-works #work-part-1 {
+        font-size: 23px;
+        padding: 10px 40px;
+      }
+
+      #work-part-2 {
+        /* background: rebeccapurple; */
+        width: 70%;
+        /* height: 90%; */
+        /* margin: 0px 20px; */
+        border-left: 3px solid;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0 0px 0 30px;
+      }
+
+      #top {
+        display: flex;
+        gap: 20px;
+        padding: 20px 20px;
+        padding-top: 0;
+        width: 100%;
+      }
+
+      #bottom {
+        display: flex;
+        gap: 20px;
+        border-top: 2px solid;
+        padding: 20px 20px;
+        width: 100%;
+      }
+
+      .right-work {
+        /* background: red; */
+        border-left: 2px solid;
+        padding-left: 30px;
+        padding-top: 0;
+      }
+
+      .w-50 {
+        width: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="navbar">
+        <h3>0</h3>
+        <h3>Menu</h3>
+      </div>
+    </header>
+    <main>
+      <div id="hero">
+        <h1>
+          Ali Raza <br />
+          Web Developer
+        </h1>
+        <div id="scroll">
+          <h3>(Punjab, Pakistan)</h3>
+          <h3>&downarrow;Scroll Down</h3>
+        </div>
+      </div>
+      <div id="hero-image"></div>
+      <div id="about-section">
+        <h3>
+          As a Web Developer, I focus on producing top-notch and impactful
+          digital experiences.
+        </h3>
+        <div id="nav-part-2">
+          <h4>(About Me)</h4>
+          <div id="icons">
+            <i>fb</i>
+            <i>twiter</i>
+            <i>linkedin</i>
+            <i>dribble</i>
+            <i>whatsap</i>
+            <i>indeed</i>
+          </div>
+        </div>
+      </div>
+      <div id="my-works">
+        <div id="work-part-1">
+          <h3>(What I do)</h3>
+          <i>&downarrow;</i>
+        </div>
+        <div id="work-part-2">
+          <div id="top">
+            <div class="left-work w-50">
+              <h2>Figma to HTML</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatibus officia est natus quo veniam debitis at qui
+                consequuntur magni, minima deleniti sint ea suscipit, quaerat
+                alias? Cum maiores adipisci animi sed perspiciatis placeat.
+              </p>
+            </div>
+            <div class="right-work w-50">
+              <h2>Figma to HTML</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatibus officia est natus quo veniam debitis at qui
+                consequuntur magni, minima deleniti sint ea suscipit, quaerat
+                alias? Cum maiores adipisci animi sed perspiciatis placeat.
+              </p>
+            </div>
+          </div>
+          <div id="bottom">
+            <div class="left-work w-50">
+              <h2>Figma to HTML</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatibus officia est natus quo veniam debitis at qui
+                consequuntur magni, minima deleniti sint ea suscipit, quaerat
+                alias? Cum maiores adipisci animi sed perspiciatis placeat.
+              </p>
+            </div>
+            <div class="right-work w-50">
+              <h2>Figma to HTML</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatibus officia est natus quo veniam debitis at qui
+                consequuntur magni, minima deleniti sint ea suscipit, quaerat
+                alias? Cum maiores adipisci animi sed perspiciatis placeat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

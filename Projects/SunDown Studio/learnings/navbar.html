@@ -1,0 +1,87 @@
+<head>
+    <style>
+       * {
+    margin:0;
+    padding:0;
+    font-family : sans-serif;
+    box-sizing : border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+}
+
+#logo{
+    cursor: pointer;
+}
+
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1.2rem;
+}
+
+#nav-links h4 {
+    border: 1px solid rgba(11, 5, 0, .2);
+    padding: 0.625em 1.5em;
+    border-radius: 100vw;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 6;
+    transition: all .5s ease;
+
+}
+
+#nav-links h4::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    bottom: -100%;
+    /* for bottom border uncomment */
+    /* border-radius: 100vw; */
+    left: 0;
+    transition: all .5s ease;
+}
+
+#nav-links h4:hover::after {
+    bottom: 0;
+    /* for bottom border uncomment */
+    /* border-radius: 100vw; */
+
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: #0b0500;
+}
+
+#nav-links h4:hover a {
+    color: #fff;
+    position: relative;
+    z-index: 9;
+}
+    </style>
+</head>
+
+
+
+<nav>
+
+    <div id="logo">
+        <img src="assets/logo.svg" alt="logo">
+    </div>
+    <div id="nav-links">
+        <h4><a href="#">Studio</a></h4>
+        <h4><a href="#">Work</a></h4>
+        <h4><a href="#">Contact</a></h4>
+    </div>
+
+</nav>

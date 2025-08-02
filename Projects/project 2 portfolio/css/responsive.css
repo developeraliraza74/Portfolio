@@ -1,0 +1,40 @@
+@media screen and (min-width : 1300px) {
+    #about-section h3 {
+        text-align-last: center;
+    }
+}
+
+@media screen and (max-width : 652px) {
+    #hero h1 {
+        font-size: 9vw;
+        line-height: 8vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    #about-section h3 {
+        text-align-last: auto;
+    }
+    #about-section h3 {
+        /* font-size: 5vw; */
+        font-size: 5vh;
+        line-height: 4.5vh;
+        text-align-last: center;
+        letter-spacing: -1px;
+        font-weight: 700;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .f-3 {
+        font-size: 2vh;
+    }
+
+    #about-section h3 {
+        font-size: 4vh;
+        line-height: 4vh;
+    }
+}
+

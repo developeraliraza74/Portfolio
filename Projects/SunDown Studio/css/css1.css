@@ -1,0 +1,32 @@
+
+#page2 #animation {
+    position: absolute;
+    height: 28vw;
+    width: 28vw;
+    background: blue;
+    /* background: linear-gradient(to top right, var(--animationColor), #fe5b0a); */
+    border-radius: 50%;
+    /* filter: blur(20px); */
+    top: 57%;
+    left: 28%;
+    /* animation: page2bottom 5s ease-in-out infinite; */
+}
+
+
+#animation .anim1{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* background: linear-gradient(to top right, var(--animationColor), #fe5b0a); */
+    background: green;
+    position: absolute;
+}
+#animation .anim2{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* background: linear-gradient(to top right, var(--animationColor), #fe5b0a); */
+    background: blue;
+    position: absolute;
+    top: 20%;
+}

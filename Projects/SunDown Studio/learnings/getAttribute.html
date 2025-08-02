@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getAttribute</title>
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="" data-image="helloMy name is ali">
+    </div>
+
+
+    <script>
+        let img = document.querySelector("img")
+       console.log(img.getAttribute("data-image"))
+        // value in data-image or any attribute can be checked by using this getAttribute Method
+        // Syntax is mentioned above
+        img.setAttribute("data-img", "Ali ")
+        // We can set any attribute in our html using setAttribute("attribute-name", "Attribute value")
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Animations */
+
+@keyframes hero-anime1 {
+    from {
+        transform: translate(-15%, -5%);
+    }
+
+    to {
+        transform: translate(15%, -5%);
+    }
+}
+
+@keyframes hero-anime2 {
+    from {
+        transform: translate(-5%, -2%);
+    }
+
+    to {
+        transform: translate(15%, 15%);
+    }
+}
+
+
+@keyframes bottom-anime1 {
+    from {
+        transform: translate(0%, -20%);
+    }
+
+    to {
+        transform: translate(-30%, 0%);
+    }
+}
+
+@keyframes bottom-anime2 {
+    from {
+        transform: translate(10%, -10%);
+    }
+
+    to {
+        transform: translate(-10%, 10%);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes page2bottom {
+    from {
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        transform: translate(-10%, 7%) skew(-20deg);
+    }
+}
+
+
+/*  Footer anime */
+
+@keyframes footer-anime3 {
+    from {
+        transform: translate(-10, -20%);
+    }
+
+    to {
+        transform: translate(-50%, 0%);
+    }
+}
+
+@keyframes footer-anime2 {
+    from {
+        transform: translate(10%, -10%);
+    }
+
+    to {
+        transform: translate(60%, 0%);
+    }
+}
+
+@keyframes footer-anime1 {
+    from {
+        transform: translate(0%, -10%);
+    }
+
+    to {
+        transform: translate(0%, -10%);
+    }
+}

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--textColor);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --borderColor: #5a5a5a;
+    --textColor: #e4d6d6;
+}
+
+#main {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5vw 10vw;
+    background: #111;
+}
+
+#main .all-songs {
+    font-size: 3vw;
+    color: #fff;
+}
+
+#left {
+    height: 100%;
+    width: 50%;
+    background-image: url('images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+#right {
+    height: 82vh;
+    width: 50%;
+    /* background: blue; */
+    padding: .5vh 3vw;
+}
+
+
+#all-songs {
+    /* background: red; */
+    height: 80%;
+    margin-top: 12px;
+
+}
+
+.song-card {
+    border-top: 1px solid var(--borderColor);
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.song-card:hover {
+    background-color: #444;
+}
+
+.song-card .part1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+#all-songs img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+}
+
+.song-card h4 {
+    margin-left: 3vw;
+    font-size: 2vw;
+    line-height: 1.5vw;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.song-card h6 {
+    font-size: 1.8vw;
+}
+
+.song-card:nth-last-child(1) {
+    border-bottom: 1px solid var(--borderColor);
+}
+
+#player {
+    height: 13%;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#player h3 {
+    background-color: red;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+#player h3:active {
+    scale: 1.2;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: #000;
+}
+
+footer a{
+    padding-bottom: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+
+    &:hover{
+        text-decoration: underline;
+        color: #aaa9a9;
+    }
+}
+
+@media (max-width:500px) {}

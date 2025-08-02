@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: gilroy; */
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+header nav {
+    width: 100%;
+    padding: 2vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-part-1 {
+    width: 46%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-part-1 h3 {
+    font-size: 2vw;
+}
+
+#nav-part-1 h3.visual {
+    font-size: 1.6vw;
+}
+
+#nav-part-2 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav a {
+    font-size: 2vw;
+    text-decoration: none;
+    color: #000;
+    padding-right: 30px;
+    transition: all .4s ease-in;
+    font-weight: 400;
+}
+
+nav .logo {
+    font-size: 2.5vw;
+    font-weight: 600;
+}
+
+nav .visual {
+    font-size: 1vw;
+}
+
+nav a:hover {
+    color: #aaa;
+
+}
+
+#nav-part-2 .p0 {
+    padding-right: 0;
+}
+
+.icon {
+    display: none;
+}
+
+main #hero {
+    padding: 2vw 5vw;
+}
+
+main #hero h3 {
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+main #hero h1 {
+    margin-top: 1vw;
+    font-size: 9vw;
+    line-height: 8vw;
+    letter-spacing: -2px;
+    word-spacing: .5vw;
+    font-weight: 500;
+    padding-left: 2vw;
+}
+
+#case-studies {
+    padding: 2vw 5vw;
+    margin-top: 3vw;
+}
+
+#case-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#case-header h3 {
+    font-size: 2.6vw;
+    font-weight: 400;
+}
+
+#case-header #right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+#case-header #right #line {
+    height: 3px;
+    width: 20vw;
+    background-color: #000;
+}
+
+#projects {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    padding: 4vw 5vw;
+    gap: 7vw;
+}
+
+
+
+
+#projects .elem .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+
+
+
+#projects .elem .bottom .btm-left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btm-left h3 {
+    font-size: 2.5vw;
+}
+
+.btm-left p {
+    font-size: 1.5vw;
+    color: #585858;
+}
+
+.btm-right i {
+    padding: 1vw 2vw;
+    border: 2px solid #000;
+    border-radius: 150px;
+    font-size: 2.4vw;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.btm-right i:hover {
+    color: white;
+    background-color: black;
+}
+
+.btm-right .card2i {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btm-right .card2i:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid #000;
+}
+
+
+#elem1 img:hover,
+#elem2 img:hover {
+    scale: 2;
+}
+
+.elem {
+    height: 70%;
+    width: 50%;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: all .6s ease-in;
+}
+
+@media (width <=570px) {
+    .elem {
+        height: 40%;
+        width: 100%;
+    }
+}
+
+@media (width <=490px) {
+    nav a {
+        font-size: 3vw;
+        width: 50%;
+    }
+
+
+
+    #nav-part-2 h3 a {
+        display: none;
+    }
+
+    #nav-part-1 h3.visual {
+        font-size: 1.6vw;
+        padding-left: 5%;
+        width: 100%;
+    }
+
+
+    .icon {
+        display: block;
+    }
+    
+}

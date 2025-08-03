@@ -129,9 +129,11 @@ function cursorAnimation() {
   });
 
   document.querySelectorAll(".elem").forEach(function (elem) {
-    elem.addEventListener("mouseenter", function () {
+    elem.addEventListener("mouseenter", function (dets) {
       gsap.to(cursor, {
         transform: "translate(-50%, -50%) scale(1)",
+        left: dets.clientX,
+        top: dets.clientY,
       });
     });
     elem.addEventListener("mouseleave", function () {
